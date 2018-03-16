@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>   
+    <header class="form-header">
+        <div class="container flex-center-v">
+            <div class="logo"><a href="index.html"><img src="img/cg-logo-white.png" height="58"></a></div>
+            <div class="menu_btn">
+                <span></span><span></span><span></span>Menu
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-wrap flex-center">
+            <div>
+                <ul class="menu">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="portfolio.html">Our Portfolio</a></li>
+                  <li><a href="available-properties.html">Available Properties</a></li>
+                  <li><a href="">Mews II</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="sub-menu">
+                  <li><a href="request-a-showing.html">Request a Showing</a></li>
+                  <li><a href="maintenance-request.html">Maintenance Request</a></li>
+                  <li class="heading-decor light long">&nbsp;</li>
+                </ul>
+            </div>
+        </div>  
+    </nav>   
+    <div id="main">
+        <section class="form">
+            <h2 class="form-heading">
+                <span class="heading-decor dark long">&nbsp;</span>Request<br>a Showing
+            </h2>
+            <div class="container">
+                <span class="required-fields"><span class="required-icon"></span>Required Fields</span>      
+                <form>
+                    <div id="step1">
+                        <div class="field">
+                            <div class="select-style">
+                                <span class="required-icon"></span>
+                                <select name="property"> 
+                                  <option selected>Choose a Property</option>
+                                  <option value="value1">North Central Village (912 N Central Street)</option> 
+                                  <option value="value2">Central Street Lofts (125 S Central Street)</option>
+                                  <option value="value3">Gay Street Apartment (109 S Gay Street)</option>
+                                  <option value="value4">Marc Nelson Building (700 E. Depot Avenue)</option>
+                                  <option value="value5">Historic Jefferson (2645 Jefferson Ave)</option>
+                                  <option value="value6">The Summit (102-104 W. Summit Hill Drive)</option>
+                                  <option value="value6">Historic Oakland (216 Oakland St)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Unit # (If applicable)">
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="text" placeholder="When are you available to meet?" required>
+                        </div>
+                        <div class="form-section-header">
+                            Applicant Information
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="text" placeholder="Date of Birth (MM/DD/YYYY)" required>
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="text" placeholder="SSN (000-00-0000)" required>
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="text" placeholder="Mobile Phone (555-555-5555)" required>
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="field">
+                            <span class="required-icon"></span>
+                            <input type="text" placeholder="When do yo uneed to move?" required>
+                        </div>
+                        <div class="field center-h">
+                            <a href="" class="btn_form">Next<span class="btn-line"></span></a>
+                        </div>
+                    </div><!-- end step1 -->
+                    <div class="step-indicator">
+                        <ul class="flex-center-v">
+                            <li class="active"></li><li></li><li></li><li></li><li></li>
+                        </ul>
+                        <p class="step-dialog">Step <span>1</span> of 5</p>
+                    </div>
+                </form> 
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-1-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-1-2">
+                        <div class="logo"><span class="heading-decor light long">&nbsp;</span><img src="img/logo.png" height="125"></div>
+                        <div class="row clearfix">
+                            <div class="col-1-2">   
+                                <h5>Get in Touch</h5>   
+                                <a href="">865.524.2525</a> <br> <a href="mailto:info@courtlandgroup.com">info@courtlandgroup.com</a>   
+                            </div>
+                            <div class="col-1-2">
+                                <h5>Visit Us</h5>   
+                                <a href="">109 S. Gay Street, Suite 301<br>Knoxville TN 37902 </a> 
+                            </div>
+                        </div>
+                        <span class="copyright">&copy; 2017 The Courtland Group</span>
+                    </div>
+                </div>
+            </div>
+        </footer>       
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

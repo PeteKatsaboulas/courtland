@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>    
+    <header>
+        <div class="container flex-center-v">
+            <div class="logo"><a href="index.html"><img src="img/cg-logo.png" height="58"></a></div>
+            <div class="menu_btn">
+                <span></span><span></span><span></span>Menu
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-wrap flex-center">
+            <div>
+                <ul class="menu">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="portfolio.html">Our Portfolio</a></li>
+                  <li><a href="available-properties.html">Available Properties</a></li>
+                  <li><a href="">Mews II</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="sub-menu">
+                  <li><a href="request-a-showing.html">Request a Showing</a></li>
+                  <li><a href="maintenance-request.html">Maintenance Request</a></li>
+                  <li class="heading-decor light long">&nbsp;</li>
+                </ul>
+            </div>
+        </div>  
+    </nav>
+    <div id="main">
+        <div class="hero-page flex-center" style="background:url(img/hero-portfolio.jpg) no-repeat center top;background-size:cover;">>
+            <div class="hero-copy">
+                <h2><span class="heading-decor light long">&nbsp;</span>Patricia Nash</h2>
+            </div>
+        </div>
+        <section class="property-slides">
+            <div class="container"> 
+                <div class="property-slider row clearfix">
+                    <div class="col-1-2">
+                        <img src="img/properties/slide1.jpg">
+                    </div>
+                    <div class="col-1-2">
+                        <img src="img/properties/slide2.jpg">
+                    </div> 
+                    <div class="col-1-2">
+                        <img src="img/properties/slide1.jpg">
+                    </div>
+                    <div class="col-1-2">
+                        <img src="img/properties/slide2.jpg">
+                    </div> 
+                    <div class="col-1-2">
+                        <img src="img/properties/slide1.jpg">
+                    </div>
+                    <div class="col-1-2">
+                        <img src="img/properties/slide2.jpg">
+                    </div> 
+                </div>
+                <div class="next_btn"><i class="fa fa-chevron-right"></i><div class="btn-bg">&nbsp;</div></div>
+                <div class="prev_btn"><i class="fa fa-chevron-left"></i><div class="btn-bg">&nbsp;</div></div>
+            </div>  
+        </section>
+        <section class="property-description">
+            <div class="container">          
+                <span class="portfolio-address"><span class="heading-decor dark short"></span>1132 N 6th Ave</span>
+                <h3>Patricia Nash</h3>
+                <div class="row clearfix">
+                    <div class="col-1-2">  
+                        <p>
+                            Emerging as a leading, designer leather handbag and accessory brand which recently launched footwear, Patricia Nash has moved into its new Headquarters near downtown Knoxville. The newly renovated industrial building located off of 6th Avenue will house its Flagship Showroom, creative and corporate operations, and E-commerce distribution center. Patricia Nash’s sales team will continue to operate out of Nash’s NYC showroom. 
+                        </p> 
+                    </div> 
+                    <div class="col-1-2 clearfix"> 
+                        <div class="row clearfix">
+                            <div class="col-1-2">
+                                <h4>Specs</h4>
+                                <ul>
+                                    <li>Retail</li>
+                                    <li>2600 sq ft</li>
+                                    <li>2 stories</li>
+                                    <li>Built 1932</li>
+                                    <li>Renovated 2017</li>
+                                </ul>
+                            </div> 
+                            <div class="col-1-2">
+                                <h4>Details</h4>
+                                <ul>
+                                    <li>High ceilings</li>
+                                    <li>Large windows</li>
+                                    <li>Beautiful hardwood</li>
+                                    <li>Stained concrete</li>
+                                    <li>Exposed brick &amp; plaster</li>
+                                </ul>
+                            </div> 
+                        </div>
+                        <span class="btn_primary inactive">
+                            No Units Available
+                            <span class="btn-line"></span>
+                        </span>
+                    </div> 
+                </div>                      
+            </div>
+        </section>
+        <div id="map-wrap">
+            <div id="map"></div>
+        </div>
+        <script>
+        function initMap() {
+
+            var property = {lat: 35.983114, lng: -83.914427};
+            var property_name;
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: property,
+              zoom: 17,
+              disableDefaultUI: true,
+              scrollwheel: false,
+              styles:
+              [
+                  {
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#f5f5f5"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                      {
+                        "visibility": "off"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#616161"
+                      },
+                      {
+                        "lightness": 100
+                      }
+                    ]
+                  },
+                  {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                      {
+                        "color": "#f5f5f5"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#bdbdbd"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#eeeeee"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#757575"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#e5e5e5"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#9e9e9e"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#ffffff"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#757575"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#dadada"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#616161"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#9e9e9e"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#e5e5e5"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "transit.station",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#eeeeee"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#c9c9c9"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#9e9e9e"
+                      },
+                      {
+                        "lightness": 50
+                      }
+                    ]
+                  }
+                ]
+            });
+
+            var property_marker = new google.maps.Marker({
+              map: map,
+              position: property,
+              icon: {
+                url: "img/properties/marker.png",
+                labelOrigin: new google.maps.Point(32, -15)
+              },
+              label: {
+                  text: "Patricia Nash",
+                  color: "#444",
+                  fontSize: "16px",
+                  fontFamily: "Alice"
+              }
+            });
+
+            var loc1 = {
+              name: "Abbey Fields Farm",
+              lat: 35.984362,
+              long: -83.913536
+            };
+            var loc2 = {
+              name: "Pub & Cafe Inc of America",
+              lat: 35.982352,
+              long: -83.915703
+            };
+          
+            var locations = [
+              [loc1.name, loc1.lat, loc1.long, 0],
+              [loc2.name, loc2.lat, loc2.long, 0]
+            ];
+
+            var property_places_markers, i;
+
+            for (i = 0; i < locations.length; i++) {
+
+              property_places_markers = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                icon: {
+                    path:google.maps.SymbolPath.CIRCLE,
+                    scale: 6,
+                    fillColor:'#252525',
+                    fillOpacity: 1,
+                    strokeColor:'#aaa',
+                    strokeWeight: 3,
+                    labelOrigin: new google.maps.Point(0, 3)
+                },
+                label: {
+                  text: locations[i][0],
+                  color: "#444",
+                  fontSize: "12px",
+                  fontFamily: "Alice"
+              }
+                
+              });
+
+            }
+          }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP_FZHDlDSl_vJmUpyPfQ_jAcUOtGKWhA&callback=initMap"></script>
+
+        <section class=" london img-bg flex-center">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-1-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-1-2">
+                        <h4>
+                        <span class="heading-decor light long">&nbsp;</span>
+                        It’s not often that Knoxville is compared to London, but 
+                        that was Courtland Group founder Jeffrey Nash’s first 
+                        thought when he came to Knoxville in the late 1990s.
+                        </h4>
+                        <a href="about.html" class="btn_primary light">
+                            Read Our Story
+                            <span class="btn-line"></span>
+                        </a>        
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-1-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-1-2">
+                        <div class="logo"><span class="heading-decor light long">&nbsp;</span><img src="img/logo.png" height="125"></div>
+                        <div class="row clearfix">
+                            <div class="col-1-2">   
+                                <h5>Get in Touch</h5>   
+                                <a href="">865.524.2525</a> <br> <a href="mailto:info@courtlandgroup.com">info@courtlandgroup.com</a>   
+                            </div>
+                            <div class="col-1-2">
+                                <h5>Visit Us</h5>   
+                                <a href="">109 S. Gay Street, Suite 301<br>Knoxville TN 37902 </a> 
+                            </div>
+                        </div>
+                        <span class="copyright">&copy; 2017 The Courtland Group</span>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

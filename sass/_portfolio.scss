@@ -1,0 +1,129 @@
+.hero-page{
+    width:100%;
+    height:50%;
+    .hero-copy{
+        text-align:center;
+        h2{
+            text-align:left;
+            position:relative;
+            font-size:65px;
+            line-height:65px;
+            text-transform:uppercase;
+            letter-spacing:5px;
+            color:white;
+        }
+        .heading-decor{
+            background:rgba(255,255,255,0.6);
+        }
+    }
+}
+
+
+.section-menu{
+    width:100%;
+    height:80px;
+    background:#111;
+    text-align:center;
+    font-family:"Alice", serif;
+    font-size:18px;
+    line-height:80px;
+    a{
+        color:#888;
+        text-decoration:none;
+        @include transition(color 0.8s $easeOutExpo);
+        &:hover{
+            color:white;
+        }
+    }
+    li{
+        display:inline-block;
+        margin:0 20px;
+    }
+    li.active a{
+        color:white;
+    }
+}
+
+
+section.portfolio{
+    padding:120px 30px;
+    .row{
+        margin-bottom:60px;
+    }
+    .col-1-2{
+        &:first-child{
+            padding-right:60px;
+        }
+    }
+    img{ 
+        display:block;
+        width:100%;
+        border:15px solid white;
+        box-shadow:-20px 20px 80px 0 rgba(0,0,0,0.4);
+    }
+    span.portfolio-address{
+        position:relative;
+        font-size:14px;
+        margin-left:65px;
+        font-weight:300;
+        .heading-decor{
+            width:50px;
+            left:-65px;
+        }
+    }
+    h3{
+        text-align:left;
+        position:relative;
+        z-index:2;
+        font-size:28px;
+        line-height:28px;
+        text-transform:uppercase;
+        letter-spacing:4px;
+        margin-top:10px;
+    }
+    p{
+        text-align:left;
+        font-family:"Montserrat";
+        font-size:15px;
+        line-height:25px;
+        font-weight:300;
+        letter-spacing:0.5px;
+        margin-top:30px;
+    }
+    .btn_primary{
+        @include transform(translateX(60%));
+    }
+}
+
+
+.pagination{
+    padding-top:60px;
+    text-align:center;
+    ul{
+        li{
+            display:inline-block;
+            list-style:none;
+            font-size:14px;
+            margin:0 10px;
+            a{
+                color:#888;
+                text-decoration:none;
+            }
+            &.active a{
+                color:#252525;
+            }
+            &.next i{
+                vertical-align:0px;
+                text-align:center;
+                width:30px;
+                height:30px;
+                background:$blue;
+                font-size:12px;
+                line-height:32px;
+                text-indent:2px;
+                color:white;
+                border-radius:100%;
+            }
+        }
+    }
+}
