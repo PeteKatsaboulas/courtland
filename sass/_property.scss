@@ -131,6 +131,9 @@ section.property-slides{
     right:0;
     &.home{
         right:120px;
+        @media(max-width:1500px){
+            right:30px;
+        }
     }
     i{
         position:absolute;
@@ -146,6 +149,9 @@ section.property-slides{
     left:0;
     &.home{
         left:120px;
+        @media(max-width:1500px){
+            left:30px;
+        }
     }
     i{
         position:absolute;
