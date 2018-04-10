@@ -94,13 +94,8 @@ body {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 960px;
   margin: 0 auto;
-}
-@media (max-width: 1500px) {
-  .container {
-    max-width: 1068px;
-  }
 }
 
 section {
@@ -393,7 +388,7 @@ footer .heading-decor.light {
 .btn_primary.light {
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: -2px 6px 25px 0 rgba(0, 0, 0, 0.5);
-  background: transparent;
+  background: rgba(0, 0, 0, 0.3);
   color: white;
 }
 .btn_primary.light .btn-line {
@@ -601,23 +596,37 @@ footer .heading-decor.light {
 }
 
 .hero {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 .hero .hero-copy {
+  position: relative;
+  width: 100%;
+  z-index: 2;
   text-align: center;
 }
 .hero .hero-copy h2 {
+  display: inline-block;
   text-align: left;
   position: relative;
-  font-size: 65px;
-  line-height: 65px;
+  font-size: 45px;
+  line-height: 45px;
   text-transform: uppercase;
   letter-spacing: 5px;
   color: white;
 }
 .hero .hero-copy .heading-decor {
   background: rgba(255, 255, 255, 0.6);
+}
+.hero .hero-video {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .hero-page {
@@ -674,12 +683,12 @@ footer .heading-decor.light {
   background: rgba(255, 255, 255, 0.4);
 }
 .heading-decor.long {
-  width: 200px;
-  left: -230px;
+  width: 150px;
+  left: -180px;
 }
 .heading-decor.short {
-  width: 100px;
-  left: -120px;
+  width: 80px;
+  left: -100px;
 }
 
 .sub-heading {
@@ -730,6 +739,7 @@ section.our-story .row .col-1-2:last-child {
 }
 section.our-story .row .col-1-2:last-child img {
   display: block;
+  width: 100%;
   border: 15px solid white;
   box-shadow: -20px 20px 80px 0 rgba(0, 0, 0, 0.4);
   z-index: 5;
@@ -744,8 +754,8 @@ section.our-story h3 {
   text-align: left;
   position: relative;
   z-index: 2;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 35px;
+  line-height: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
   max-width: 400px;
@@ -759,11 +769,17 @@ section.our-story p {
   letter-spacing: 0.5px;
   margin-top: 30px;
 }
+section.our-story strong {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Alice";
+  font-size: 17px;
+}
 
 .london {
   width: 100%;
   padding: 180px 0;
-  background: url(../img/london.jpg) no-repeat center;
+  background: url(../img/knoxville-bw.jpg) no-repeat center;
   background-size: cover;
   text-align: center;
 }
@@ -846,7 +862,7 @@ section.our-story p {
 }
 
 section.about {
-  padding: 180px 0;
+  padding: 120px 0;
   background: url(../img/about-building-bg.jpg) no-repeat center bottom;
 }
 section.about .col-1-2:first-child {
@@ -860,18 +876,19 @@ section.about .caption {
   padding-top: 10px;
   padding-right: 15px;
 }
-section.about img {
-  float: right;
-  display: block;
+section.about .about-images {
   border: 15px solid white;
   box-shadow: -20px 20px 80px 0 rgba(0, 0, 0, 0.4);
+}
+section.about img {
+  display: block;
 }
 section.about h3 {
   text-align: left;
   position: relative;
   z-index: 2;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 35px;
+  line-height: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -883,6 +900,12 @@ section.about p {
   font-weight: 300;
   letter-spacing: 0.5px;
   margin-top: 30px;
+}
+section.about strong {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Alice";
+  font-size: 17px;
 }
 
 section.team {
@@ -898,8 +921,8 @@ section.team h3 {
   display: inline-block;
   position: relative;
   z-index: 2;
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -929,6 +952,59 @@ section.team .col-1-2:last-child {
 section.team .col-1-2 img {
   display: block;
   width: 100%;
+}
+section.team .team-thumb {
+  cursor: pointer;
+}
+section.team .bio {
+  padding: 160px 30px 120px 30px;
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  text-align: left;
+  overflow: scroll;
+}
+section.team .bio .container {
+  max-width: 500px;
+}
+section.team .bio img {
+  padding-bottom: 30px;
+}
+section.team .bio h4 {
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 1px;
+  padding-top: 0;
+}
+section.team .bio h4 strong {
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: #888;
+}
+section.team .bio p {
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: 20px;
+  text-align: left;
+}
+section.team .bio .modal-close {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  width: 50px;
+  cursor: pointer;
+}
+section.team .bio .modal-close img {
+  display: block;
+  width: 50px;
 }
 
 section.contact {

@@ -10,7 +10,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -43,7 +43,7 @@
         </div>  
     </nav>    
     <div id="main">
-        <div class="hero-page flex-center" style="background:url(img/hero-about.jpg) no-repeat center top;background-size:cover;">
+        <div class="hero-page flex-center" style="background:url(img/about-hero.jpg) no-repeat center top;background-size:cover;">
             <div class="hero-copy">
                 <h2><span class="heading-decor light long">&nbsp;</span>About Us</h2>
             </div>
@@ -52,25 +52,30 @@
             <div class="container">  
                 <div class="row clearfix flex-center-v">
                     <div class="col-1-2 clearfix">
-                        <img src="img/jeffrey-standing.jpg">
+                        <div class="about-images">
+                            <div class="about-images-slider"> 
+                                <img src="img/about-knoxville.jpg">      
+                                <img src="img/nash-working.jpg">
+                                <img src="img/about-stone.jpg">
+                                <img src="img/about-apartment.jpg">   
+                            </div>
+                        </div>   
                     </div>
                     <div class="col-1-2">
                         <div class="col-1-2-copy">
-                            <h3><span class="heading-decor dark long"></span>It’s not often that Knoxville is compared to London, but that was Courtland Group founder Jeffrey Nash’s first thought when he came to Knoxville in the late 1990s.</h3>
-                            
+                            <h3><span class="heading-decor dark long"></span>Knoxville is home, and we’re here to welcome you.</h3>  
                             <p>
-                            Having spent two decades reclaiming historic warehouses and factories and converting them into residential homes in East London, Jeffrey understood the value of restoring those structures that provide the charm and character of neighborhoods. In the 1970’s East London was a page straight from a Dickens novel &mdash; a bleak district marked by decaying and abandoned buildings. Through the efforts of the Courtland Group and others, today East London is a vibrant urban district filled with shops, homes, restaurants and people.
+                            The Courtland Group is more than a just a real estate development company. We are an inspired team of developers, builders, and relationship specialists. Our passion for this city and its people is evident in every building we touch and every connection we make.
                             </p>
                             <p>
-                            With redevelopment efforts just beginning as he arrived 
-                            in Knoxville, Jeffrey saw the potential to take the same successful approach he refined in London – find small, unique historic buildings nestled amidst the larger structures under development, or those buildings just outside the redevelopment spotlight, and restore their historic luster while integrating contemporary amenities.
+                            <strong>As developers</strong>, we recognize potential and exceed expectations. Our aim is to keep Knoxville’s history alive by preserving and revitalizing old buildings. The Courtland Group believes each and every building tells a story and has the potential to create new ones. Let us help you begin your story.
                             </p>
                             <p>
-                            The Courtland Group’s first Knoxville project, the Old City’s Downtown Diner, was a tool to learn the city’s redevelopment guidelines and practices. Subsequent historic renovation projects include the Old Knoxville Business College, now known as Keystone Place; Sandstone Court, an upscale residential development; North Central Village is a restored 1930’s structure; an executive mixed use development on the 100 Block of Gay Street and the Crown & Goose and apartments in Knoxville’s Old City.
+                            <strong>As builders</strong>, we pride ourselves on quality work – building commercial spaces and homes made to last. The Courtland Group’s architectural planning continually sets new standards for Knoxville’s community. We preserve the original charm of each building we touch, whilst being aware of the modern lifestyle our tenants desire.
                             </p>
                             <p>
-                                The Courtland Group retains offices in Knoxville and partners with like-minded architects to uncover and restore the city’s hidden treasures that will leave their mark for years to come.
-                            </p>           
+                              <strong>As tenant relationship specialists</strong>, we go above and beyond what’s expected in order to make you feel safe and listened to. We respond quickly and personally to each request no matter how big or small it may be. Our goal is to help you feel at home.
+                            </p>      
                         </div>
                     </div> 
                 </div>
@@ -81,26 +86,106 @@
                 <h3><span class="heading-decor light long"></span>Our Team</h3> 
                 <div class="row clearfix">
                     <div class="col-1-2">
-                        <img src="img/team1.jpg">
-                        <h4>Gene Wilder</h4>
-                        <p>Founder &amp; CEO</p>
+                        <div class="team-thumb">
+                            <img src="img/team1.jpg">
+                            <h4>Gene Wilder</h4>
+                            <p>Founder &amp; CEO</p>  
+                        </div>
+                        <div class="bio">
+                            <div class="modal-close"><img src="img/modal-close.png" width="50"></div>
+                            <div class="container">
+                                <img src="img/team1.jpg">
+                                <h4>
+                                    <span class="heading-decor light long">&nbsp;</span>
+                                    Gene Wilder<br>
+                                    <strong>Founder &amp; CEO</strong>
+                                </h4>
+                            
+                                <p>Bespoke try-hard ethical, trust fund gluten-free put a bird on it cray cardigan. Poke gluten-free raclette, craft beer green juice single-origin coffee hammock sartorial cardigan kitsch copper mug pug photo booth meh. Heirloom etsy celiac, butcher cornhole letterpress YOLO helvetica man bun paleo direct trade everyday carry cronut. Hot chicken vegan affogato, roof party next level narwhal venmo slow-carb hexagon four loko meditation sustainable. Twee craft beer succulents, keytar 3 wolf moon kale chips yuccie cold-pressed. Keffiyeh seitan tbh ramps, tofu master cleanse church-key bespoke hot chicken.
+                                </p>
+
+                                <p>
+                                Godard banjo irony cronut blue bottle YOLO street art cliche. Fingerstache thundercats chia, skateboard keffiyeh keytar cliche tumblr fashion axe. Yuccie enamel pin selvage intelligentsia drinking vinegar gentrify la croix bushwick brooklyn freegan. IPhone asymmetrical hashtag williamsburg stumptown banjo irony church-key dreamcatcher aesthetic. Synth cronut butcher, irony microdosing disrupt bushwick.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-1-2">
-                        <img src="img/team2.jpg">
-                        <h4>Gilda Radner</h4>
-                        <p>Lead Designer</p>
+                    <div class="col-1-2">  
+                        <div class="team-thumb">
+                            <img src="img/team2.jpg">
+                            <h4>Gilda Radner</h4>
+                            <p>Lead Designer</p>
+                        </div>
+                        <div class="bio">
+                            <div class="modal-close"><img src="img/modal-close.png" width="50"></div>
+                            <div class="container">
+                                <img src="img/team2.jpg">
+                                <h4>
+                                    <span class="heading-decor light long">&nbsp;</span>
+                                    Gilda Radner<br>
+                                    <strong>Lead Designer</strong>
+                                </h4>
+                            
+                                <p>Bespoke try-hard ethical, trust fund gluten-free put a bird on it cray cardigan. Poke gluten-free raclette, craft beer green juice single-origin coffee hammock sartorial cardigan kitsch copper mug pug photo booth meh. Heirloom etsy celiac, butcher cornhole letterpress YOLO helvetica man bun paleo direct trade everyday carry cronut. Hot chicken vegan affogato, roof party next level narwhal venmo slow-carb hexagon four loko meditation sustainable. Twee craft beer succulents, keytar 3 wolf moon kale chips yuccie cold-pressed. Keffiyeh seitan tbh ramps, tofu master cleanse church-key bespoke hot chicken.
+                                </p>
+
+                                <p>
+                                Godard banjo irony cronut blue bottle YOLO street art cliche. Fingerstache thundercats chia, skateboard keffiyeh keytar cliche tumblr fashion axe. Yuccie enamel pin selvage intelligentsia drinking vinegar gentrify la croix bushwick brooklyn freegan. IPhone asymmetrical hashtag williamsburg stumptown banjo irony church-key dreamcatcher aesthetic. Synth cronut butcher, irony microdosing disrupt bushwick.
+                                </p>
+                            </div>
+                        </div>
                     </div>                     
                 </div>
                 <div class="row clearfix">
                     <div class="col-1-2">
-                        <img src="img/team3.jpg">
-                        <h4>Tina Fey</h4>
-                        <p>Property Agent</p>
+                        <div class="team-thumb">
+                            <img src="img/team3.jpg">
+                            <h4>Tina Fey</h4>
+                            <p>Property Agent</p>
+                        </div>
+                        <div class="bio">
+                            <div class="modal-close"><img src="img/modal-close.png" width="50"></div>
+                            <div class="container">
+                                <img src="img/team3.jpg">
+                                <h4>
+                                    <span class="heading-decor light long">&nbsp;</span>
+                                    Tina Fey<br>
+                                    <strong>Property Agent</strong>
+                                </h4>
+                            
+                                <p>Bespoke try-hard ethical, trust fund gluten-free put a bird on it cray cardigan. Poke gluten-free raclette, craft beer green juice single-origin coffee hammock sartorial cardigan kitsch copper mug pug photo booth meh. Heirloom etsy celiac, butcher cornhole letterpress YOLO helvetica man bun paleo direct trade everyday carry cronut. Hot chicken vegan affogato, roof party next level narwhal venmo slow-carb hexagon four loko meditation sustainable. Twee craft beer succulents, keytar 3 wolf moon kale chips yuccie cold-pressed. Keffiyeh seitan tbh ramps, tofu master cleanse church-key bespoke hot chicken.
+                                </p>
+
+                                <p>
+                                Godard banjo irony cronut blue bottle YOLO street art cliche. Fingerstache thundercats chia, skateboard keffiyeh keytar cliche tumblr fashion axe. Yuccie enamel pin selvage intelligentsia drinking vinegar gentrify la croix bushwick brooklyn freegan. IPhone asymmetrical hashtag williamsburg stumptown banjo irony church-key dreamcatcher aesthetic. Synth cronut butcher, irony microdosing disrupt bushwick.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-1-2">
-                        <img src="img/team4.jpg">
-                        <h4>Kristin Wiig</h4>
-                        <p>Property Agent</p>
+                        <div class="team-thumb">
+                            <img src="img/team4.jpg">
+                            <h4>Kristin Wiig</h4>
+                            <p>Property Agent</p>
+                        </div>
+                        <div class="bio">
+                            <div class="modal-close"><img src="img/modal-close.png" width="50"></div>
+                            <div class="container">
+                                <img src="img/team4.jpg">
+                                <h4>
+                                    <span class="heading-decor light long">&nbsp;</span>
+                                    Kristin Wiig<br>
+                                    <strong>Property Agent</strong>
+                                </h4>
+                            
+                                <p>Bespoke try-hard ethical, trust fund gluten-free put a bird on it cray cardigan. Poke gluten-free raclette, craft beer green juice single-origin coffee hammock sartorial cardigan kitsch copper mug pug photo booth meh. Heirloom etsy celiac, butcher cornhole letterpress YOLO helvetica man bun paleo direct trade everyday carry cronut. Hot chicken vegan affogato, roof party next level narwhal venmo slow-carb hexagon four loko meditation sustainable. Twee craft beer succulents, keytar 3 wolf moon kale chips yuccie cold-pressed. Keffiyeh seitan tbh ramps, tofu master cleanse church-key bespoke hot chicken.
+                                </p>
+
+                                <p>
+                                Godard banjo irony cronut blue bottle YOLO street art cliche. Fingerstache thundercats chia, skateboard keffiyeh keytar cliche tumblr fashion axe. Yuccie enamel pin selvage intelligentsia drinking vinegar gentrify la croix bushwick brooklyn freegan. IPhone asymmetrical hashtag williamsburg stumptown banjo irony church-key dreamcatcher aesthetic. Synth cronut butcher, irony microdosing disrupt bushwick.
+                                </p>
+                            </div>
+                        </div>
                     </div>                     
                 </div>
             </div>
@@ -127,13 +212,13 @@
                     </div>
                 </div>
             </div>
-        
         </footer>      
     </div>
     
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

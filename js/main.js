@@ -1,6 +1,40 @@
 $(function(){
 
-    var $window = $(window);
+    var $window       = $(window),    
+        fsImg         = $('.img-fs'),
+        startwidth    = 640, 
+        startheight   = 360,
+        ratio         = startheight/startwidth,
+        imagewidth    = $(this).width(),
+        imageheight   = $(this).height(),
+        browserwidth  = $window.width(),
+        browserheight = $window.height();
+
+    $window.on('resize', function(){ 
+        
+        imagewidth    = $(this).width();
+        imageheight   = $(this).height();
+        browserwidth  = $window.width();
+        browserheight = $window.height();
+                    
+        fsImage();  
+                        
+    });
+
+    function fsImage(){
+     
+        if ((browserheight/browserwidth) > ratio){
+            fsImg.height(browserheight);
+            fsImg.width(browserheight / ratio);
+        } else {
+            fsImg.width(browserwidth);
+            fsImg.height(browserwidth * ratio);
+        };
+        fsImg.css('left', (browserwidth - fsImg.width())/2);
+        fsImg.css('top', (browserheight - fsImg.height())/2);
+
+    };
+    fsImage();  
 
     $window.on('load', function(){
         $('body').css({ opacity:'1' });
@@ -97,28 +131,105 @@ $(function(){
 
     });
 
+    $('.team-thumb').on('click', function(){
+
+        $(this).parent().find('.bio').fadeIn();
+        $('body').css({ overflow:'hidden' });
+        $window.off("mousewheel", smoothScroll);
+
+    });
+    $('.modal-close').on('click', function(){
+
+        $(this).parent().fadeOut();
+        $('body').css({ overflow:'scroll' });
+        $window.on("mousewheel", smoothScroll);
+
+    });
+
 
     //Slick slider
-    $('.property-slider').slick({
-          infinite:false,
-          dots:false,
-          arrows:true,
-          nextArrow: $('.next_btn'),
-          prevArrow: $('.prev_btn'),
-          slidesToShow:2,
-          slidesToScroll:2
-    });
 
-    $('.home-slider').slick({
-          infinite:false,
-          dots:false,
-          arrows:true,
-          nextArrow: $('.next_btn'),
-          prevArrow: $('.prev_btn'),
-          slidesToShow:1,
-          slidesToScroll:1
-    });
+    if( $('.property-slider').length > 0 ){
+        $('.property-slider').slick({
+              infinite:false,
+              dots:false,
+              arrows:true,
+              nextArrow: $('.next_btn'),
+              prevArrow: $('.prev_btn'),
+              slidesToShow:2,
+              slidesToScroll:2
+        });
+    }
+    
+    if( $('.home-slider').length > 0 ){
+        $('.home-slider').slick({
+              infinite:false,
+              dots:false,
+              arrows:true,
+              nextArrow: $('.next_btn'),
+              prevArrow: $('.prev_btn'),
+              slidesToShow:1,
+              slidesToScroll:1
+        });
+    }
+    if( $('.about-images-slider').length > 0 ){
+        $('.about-images-slider').slick({
+              dots:false,
+              arrows:false,
+              infinite: true,
+              speed: 2000,
+              fade: true,
+              cssEase: 'linear',
+              autoplay:true,
+              autoplaySpeed: 4000,
+        });
+    }
 
+
+
+
+
+    
+/*
+    function fadeLi(elem) {
+        var delay = 11000;
+        elem.fadeIn().delay(delay).fadeOut(1000, function () {
+            if (elem.next().length > 0) {
+                fadeLi(elem.next());
+            } else {
+                fadeLi(elem.siblings(':first'));
+            }
+        });
+    }
+
+    $(function () {
+        $('.hero-copy-headlines li').hide();
+        fadeLi($('.hero-copy-headlines li:first'));
+    });
+*/
+
+/*
+    function headlineFade(){
+
+        $('.hero-copy-headlines li:first').fadeIn(1000).delay(5000).fadeOut(1000,function(){
+
+            $('.hero-copy-headlines li:nth-child(2)').fadeIn(1000).delay(4000).fadeOut(1000,function(){
+
+                $('.hero-copy-headlines li:nth-child(3)').fadeIn(1000).delay(9000).fadeOut(1000,function(){
+
+                     $('.hero-copy-headlines li:last').fadeIn(1000).delay(1500).fadeOut(1000,function(){headlineFade();});
+
+                });
+
+            });
+
+        })
+
+    }
+    headlineFade();
+    
+*/
+   
 
 	
 	
